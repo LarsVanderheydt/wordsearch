@@ -23,7 +23,7 @@ const WordSearchAdd = ({
     drawPuzzle();
   };
 
-  const numberOfItems = Array.apply(null, Array(6));
+  const numberOfItems = Array.from(Array(6).keys());
 
   return (
     <div className="config-affiche__items config-affiche__inputs">
@@ -35,14 +35,10 @@ const WordSearchAdd = ({
             onBlur={e => handleBlur(e)}
             maxLength="12"
           />
-          <button onClick={e => handleBoldClick(e)} id={`word_${i}_bold`}>
-            bold
-          </button>
+          <button onClick={e => handleBoldClick(e)} id={`word_${i}_bold`}>bold</button>
         </div>
       ))}
-      <button onClick={e => handleRandom(e)} className="random_btn">
-        Random
-      </button>
+      <button onClick={e => handleRandom(e)} className="random_btn">Random</button>
     </div>
   );
 };

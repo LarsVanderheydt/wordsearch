@@ -111,9 +111,7 @@ class App extends Component {
         let giveBold = false;
 
         bolds.forEach(bold => {
-          if (row[j].id.find(id => id === bold)) {
-            giveBold = true;
-          }
+          if (row[j].id.find(id => id === bold)) giveBold = true;
         })
 
         puzzleItems.push(
@@ -135,9 +133,7 @@ class App extends Component {
 
   idsToString(ids) {
     let myId = '';
-    ids.forEach(id => {
-      myId += id + ' ';
-    })
+    ids.forEach(id => myId += id + ' ')
 
     return myId;
   }
